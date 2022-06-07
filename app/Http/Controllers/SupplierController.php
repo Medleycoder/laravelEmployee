@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 
 class SupplierController extends Controller
 {
-    public function index()
+    public function inde()
     {
         // $post = DB::select('select * from suppliers');
         // $pagina = DB::table('suppliers')->paginate(2);
@@ -44,10 +44,10 @@ class SupplierController extends Controller
     //    ;
     }
 
-    public function show()
-    {
-        return users::all();
-    }
+    // public function show()
+    // {
+    //     return users::all();
+    // }
 
     public function update_employee($id)
     {

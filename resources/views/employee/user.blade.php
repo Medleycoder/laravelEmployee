@@ -8,7 +8,7 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col-lg-6"><h1>Add New User</h1></div>
-                        <div class="col-lg-6 "><button class="btn btn-primary float-end">Back to table</button></div>
+                        <div class="col-lg-6 "><a href="{{ url('/') }}" class="btn btn-primary float-end">Back to table</a></div>
                     </div>
 
                     <div class="card-body">

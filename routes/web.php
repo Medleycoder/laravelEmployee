@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SupplierController;
+use App\Http\Controllers\employController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +23,7 @@ use App\Http\Controllers\SupplierController;
 // });
 
 
-Route::get('/',[SupplierController::class,'index']);
+Route::get('/',[SupplierController::class,'inde']);
 
 Route::get('/formUser',[SupplierController::class,'showForm']);
 
@@ -35,3 +36,10 @@ Route::get('/update_employee/{id}',[SupplierController::class,'update_employee']
 Route::get('/delete_employee/{id}',[SupplierController::class,'delete_employee']);
 
 Route::put('/updateUser/{id}',[SupplierController::class,'updateUser']);
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                                //EMPLOYCONTROLLER//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Route::resource('/employee', employController::class);
