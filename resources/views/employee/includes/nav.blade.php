@@ -13,12 +13,7 @@
           <li class="nav-item">
             <a class="nav-link" href="{{ url('/formUser') }}">AddUser</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
+        
         </ul>
       </div>
     </div>

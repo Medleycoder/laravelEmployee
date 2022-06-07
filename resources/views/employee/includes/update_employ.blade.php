@@ -6,12 +6,12 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col-lg-6"><h1>Update User</h1></div>
-                        <div class="col-lg-6 "><button class="btn btn-primary float-end">Back to table</button></div>
+                        <div class="col-lg-6 "><a href="{{ url('/') }}" class="btn btn-primary float-end">Back to table</a></div>
                     </div>
 
-                    @foreach ($employee as $employees )
                     <div class="card-body">
-                      <form action="{{ url('updateUser',$employees->id) }}" method="POST">
+                        @foreach ($employee as $employees )
+                        <form action="{{ url('updateUser',$employees->id) }}" method="POST">
                         @csrf
                         @method('PUT')
                             <input type="hidden" value="{{ $employees->id }}">                         

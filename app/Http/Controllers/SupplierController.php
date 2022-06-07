@@ -59,21 +59,14 @@ class SupplierController extends Controller
 
     public function updateUser(Request $request,$id)
     {
-        $updateEmp = DB::table('suppliers')->where('id',$id)->update(
+        $updateEmp = DB::table('suppliers')->where('id',$id)->update([
+            'username' =>$request->input('username'),
+            'email' => $request->input('email'),
+            'phone' => $request->input('phone'),
+            'gender' => $request->input('gender')
+        ]);
 
-            $updateEmp->username=$request->username,
-    
-            $updateEmp->email=$request->email,
-    
-            $updateEmp->phone=$request->phone,
-    
-            $updateEmp->gender=$request->gender,
-    
-            $updateEmp->save(),
-           
-        );
-       
-        return redirect()->back()->with('message','Employee updated successfully');
+        return redirect('/')->with('message','Employee updated successfully');
     }
 
 
